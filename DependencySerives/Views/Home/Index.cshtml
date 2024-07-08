@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Service Type</th>
+                <th>First Task ID</th>
+                <th>Second Task ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Transient</td>
+                <td>@ViewBag.Transient1</td>
+                <td>@ViewBag.Transient2</td>
+            </tr>
+            <tr>
+                <td>Scoped</td>
+                <td>@ViewBag.Scoped1</td>
+                <td>@ViewBag.Scoped2</td>
+            </tr>
+            <tr>
+                <td>Singleton</td>
+                <td>@ViewBag.Singleton1</td>
+                <td>@ViewBag.Singleton2</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    
+</div>
+<div class="text-center">
+    <h1>Type Of Dependency Services</h1>
+    <h2>Transient VS Singleton VS Scope</h2>
+    <p>
+        Difference between these types<br />.
+        Internal working of dependency service types
+    </p>
+    <h3>Transient Service:</h3>
+    <p>
+        Transient objects are always different.
+        A new instance is provided to every controller and every service.
+    </p>
+
+
+    <h3>Singleton Service:</h3>
+    <p>
+        Singleton services are the same for every object and every request.
+        Usually created the first time they are requested.
+        Other requests use the same instance.
+    </p>
+    
+    <h3>Scoped Service</h3>
+    <p>
+        Scoped object are the same within a scope, but different across different scopes
+        Scope here usually refers to a request received by the application.
+    </p>
+    
+    
+</div>
